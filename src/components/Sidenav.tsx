@@ -30,8 +30,9 @@ const Sidenav = () => {
         {Day.map((days, index) => {
           return (
             <div
+             
               className=" rounded-md w-full hover:bg-[#272829] p-2 text-sm transition"
-              key={days.daycount}
+              key={index}
             >
               <Link href={days.link}>{days.day}</Link>
             </div>
