@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { img1, img2 } from "./images";
 
 const imagedata = [
@@ -23,6 +23,10 @@ const Day1 = () => {
     setCounter((prevCounter) => (prevCounter + 1) % imagedata.length);
   };
 
+  useEffect(()=>{
+   const interval=setInterval(incrementit,2000)
+   return ()=>clearInterval(interval)
+  },[])
   return (
     <div className="p-4 text-sm flex flex-col items-center justify-center h-screen">
       <p className="mb-4">
