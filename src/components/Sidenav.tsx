@@ -15,12 +15,12 @@ const Sidenav = () => {
     },
     {
       daycount: 2,
-      day: "Day 2:Buttons",
+      day: "Day 2:API Call Server",
       link: "/Day2",
     },
     {
       daycount: 1,
-      day: "Day 3:Dropdown",
+      day: "Day 3:API Call Client",
       link: "/Day3",
     },
   ];
