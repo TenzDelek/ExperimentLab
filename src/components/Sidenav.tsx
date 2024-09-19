@@ -11,27 +11,32 @@ const Sidenav = () => {
     {
       daycount: 1,
       day: "Day 1:Image Slider",
-      link: "/Day1",
+      link: "/1imageslider",
     },
     {
       daycount: 2,
       day: "Day 2:API Call Server",
-      link: "/Day2",
+      link: "/2serverapi",
     },
     {
       daycount: 3,
       day: "Day 3:API Call Client",
-      link: "/Day3",
+      link: "/3clientapi",
     },
     {
       daycount: 4,
       day: "Day 4:Dynamic Route",
-      link: "/Day4",
+      link: "/4dynamic",
     },
     {
       daycount: 5,
       day: "Day 5:UseRouter and redirect",
-      link: "/Day5",
+      link: "/5userouter",
+    },
+    {
+      daycount: 6,
+      day: "Day 5:onClick",
+      link: "/6onclick",
     },
   ];
   return (
