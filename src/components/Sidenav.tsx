@@ -19,9 +19,19 @@ const Sidenav = () => {
       link: "/Day2",
     },
     {
-      daycount: 1,
+      daycount: 3,
       day: "Day 3:API Call Client",
       link: "/Day3",
+    },
+    {
+      daycount: 4,
+      day: "Day 4:Dynamic Route",
+      link: "/Day4",
+    },
+    {
+      daycount: 5,
+      day: "Day 5:UseRouter and redirect",
+      link: "/Day5",
     },
   ];
   return (

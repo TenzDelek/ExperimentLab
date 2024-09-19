@@ -44,11 +44,10 @@ const Day1 = () => {
         </button>
         <div className="relative w-[100px] h-[100px]">
           <Image
-            className="rounded-lg"
+            className="rounded-lg object-cover"
             draggable={false}
             src={imagedata[counter].image} //so we can use it to change image the next line
-            layout="fill"
-            objectFit="cover"
+            fill
             alt={imagedata[counter].name}
           />
         </div>
