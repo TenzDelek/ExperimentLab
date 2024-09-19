@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# parallel fetching
+usually there are fetching (async await) it does that in a waterfall manner means like a step(stair). one is finish then other is started (good when next is depend on prev) but if the both function are independent we can do that in parallel saving the runtime.
+so we use Promise.all
+> const[data1,data2]=Promise.all([getdata1(),getdata2()])
+here if one get wrong all are mark wrong
 
-## Getting Started
+> const[data1,data2]=Promise.allSettled([getdata1(),getdata2()])
+but settled makes only the one wrong, wrong.
 
-First, run the development server:
+# server action can also be done in client
+![demo](image.png)
+![serveraction](image-1.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# normal server action in server component
+![server demo](image-2.png) 
+> button has type="submit"
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![serveractionform](image-3.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### also remember to validate and auth
+![alt text](image-4.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## adding a timeout
+![alt text](image-5.png)
 
-## Learn More
+### fallback need to be above await
 
-To learn more about Next.js, take a look at the following resources:
+### if changes happens in suspense
+![alt text](image-6.png)
+put key so that if the key changes the fallback will happen(trigger)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## redirect cant be use in trycatch
+![alt text](image-7.png)
+error
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+the correct way is 
+![alt text](image-8.png)
