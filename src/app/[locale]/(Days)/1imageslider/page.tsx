@@ -28,7 +28,7 @@ const Day1 = () => {
    return ()=>clearInterval(interval)
   },[])
   return (
-    <div className="p-4 text-sm flex flex-col items-center justify-center h-screen">
+    <div className="p-4 text-sm flex flex-col items-center justify-center">
       <p className="mb-4">
         Backstory: I got this during one of my interviews and I messed it up lol
       </p>

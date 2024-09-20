@@ -15,7 +15,7 @@ const Page:React.FC<PageProps> = ({params,searchParams}) => { //searchParams for
   const searchparams=useSearchParams() //only for client //will not make network request(get/post)
     const {id}=params
   return (
-    <div className="p-4 text-sm flex flex-col items-center justify-center h-screen">
+    <div className="p-4 text-sm flex flex-col items-center justify-center">
         <p>searchparams: http://localhost:3000/4dynamic/3?color=green</p>
         <p>server:{searchParams.color}</p>
         <p>client:{searchparams.get('color')}</p>

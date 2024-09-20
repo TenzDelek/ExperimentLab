@@ -1,55 +1,84 @@
+'use client'
+
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const Sidenav = () => {
+  const pathname = usePathname();
+  const locale = pathname.startsWith('/tib') ? 'tib' : 'en';
+
   const Day = [
     {
       daycount: 0,
-      day: "Introduction",
+      day: {
+        en: "Introduction",
+        tib: "ངོ་སྤྲོད།",
+      },
       link: "/",
     },
     {
       daycount: 1,
-      day: "Day 1:Image Slider",
+      day: {
+        en: "Day 1: Image Slider",
+        tib: "ཉིན་དང་པོ། པར་རིས་འཁོར་ལོ།",
+      },
       link: "/1imageslider",
     },
     {
       daycount: 2,
-      day: "Day 2:API Call Server",
+      day: {
+        en: "Day 2: API Call Server",
+        tib: "ཉིན་གཉིས་པ། API འབོད་སྐུལ་ཞབས་ཞུ་ཆས།",
+      },
       link: "/2serverapi",
     },
     {
       daycount: 3,
-      day: "Day 3:API Call Client",
+      day: {
+        en: "Day 3: API Call Client",
+        tib: "ཉིན་གསུམ་པ། API འབོད་སྐུལ་མཁོ་མཁན།",
+      },
       link: "/3clientapi",
     },
     {
       daycount: 4,
-      day: "Day 4:Dynamic Route",
+      day: {
+        en: "Day 4: Dynamic Route",
+        tib: "ཉིན་བཞི་པ། འགྱུར་ལྡོག་ལམ་ཁ།",
+      },
       link: "/4dynamic",
     },
     {
       daycount: 5,
-      day: "Day 5:UseRouter and redirect",
+      day: {
+        en: "Day 5: UseRouter and redirect",
+        tib: "ཉིན་ལྔ་པ། UseRouter དང་ཁ་ཕྱོགས་བསྐྱར་སྒྲིག",
+      },
       link: "/5userouter",
     },
     {
       daycount: 6,
-      day: "Day 5:onClick",
+      day: {
+        en: "Day 6: onClick",
+        tib: "ཉིན་དྲུག་པ། མནན་པ།",
+      },
       link: "/6onclick",
     },
   ];
+
   return (
-    <div className="max-sm:hidden w-[250px] ">
-      <div className=" space-y-4 p-6">
+    <div className="max-sm:hidden w-[250px]">
+      <div className="space-y-4 p-6">
         {Day.map((days, index) => {
           return (
             <div
-             
-              className=" rounded-md w-full hover:bg-[#272829] p-2 text-sm transition"
+              className="rounded-md w-full hover:bg-[#272829] p-2 text-sm transition"
               key={index}
             >
-              <Link href={days.link}>{days.day}</Link>
+              <Link href={`/${locale}${days.link}`}>
+                {days.day[locale] || days.day.en}
+              </Link>
             </div>
           );
         })}

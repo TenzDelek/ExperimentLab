@@ -11,7 +11,7 @@ const Day2 = async () => {
 
   return (
 
-    <div className=" p-4 text-sm  flex flex-col items-center justify-center h-screen ">
+    <div className=" p-4 text-sm  flex flex-col items-center justify-center ">
       <p>I know that API call is kinda backend but its important</p>
       {data && (
 <div>

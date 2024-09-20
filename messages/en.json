@@ -1,0 +1,10 @@
+{
+    "HomePage": {
+      "head":"Tenzin Delek Daily learning journal",
+      "title": "Hello world!",
+      "about": "Go to the about page",
+      "subhead":"Why I am creating this?",
+      "para":"Long story short, I am tried of tutorials, and I am still trying. and the most efficient way I found out is the trials and error. so this a journal to record my journey, a 30 day challenge to learn and explore the world of web design and development",
+      "github":"Github Repo"
+    }
+  }

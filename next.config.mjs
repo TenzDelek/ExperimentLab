@@ -1,15 +1,19 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
-          {
-            hostname: 'images.pexels.com',
-          },
-          {
-            hostname:'avatars.githubusercontent.com'
-          }
-        ],
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'images.pexels.com',
       },
+      {
+        hostname: 'avatars.githubusercontent.com'
+      }
+    ],
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

@@ -16,7 +16,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex p-4 gap-x-4 text-sm items-center justify-center h-screen">
+    <div className="flex p-4 gap-x-4 text-sm items-center justify-center ">
       <p>Like this post:</p>
       <button
         onClick={handleLike}

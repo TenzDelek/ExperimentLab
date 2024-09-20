@@ -5,7 +5,7 @@
 // const Page = () => {
 //   const router=useRouter()
 //   return (
-//     <div className="p-4 text-sm flex flex-col items-center justify-center h-screen">
+//     <div className="p-4 text-sm flex flex-col items-center justify-center ">
 
 //       <button onClick={()=>router.push("/")}>
 //      back to home client
@@ -27,7 +27,7 @@ const Page = () => {
 
   }
   return (
-    <div className="p-4 text-sm flex flex-col items-center justify-center h-screen">
+    <div className="p-4 text-sm flex flex-col items-center justify-center ">
        tenzin
     </div>
   );
