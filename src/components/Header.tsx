@@ -20,7 +20,7 @@ export default function Header() {
       <p className='sr-only'>change language</p>
       <select
         defaultValue={localActive}
-        className=' bg-black outline-none py-2'
+        className=' bg-[#0A0A0A] outline-none py-2'
         onChange={onSelectChange}
         disabled={isPending}
       >
