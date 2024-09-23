@@ -65,6 +65,14 @@ const Sidenav = () => {
       },
       link: "/6onclick",
     },
+    {
+      daycount: 7,
+      day: {
+        tib: "ཉིན་བདུན་པ་: ཕྲིས་མ།",
+        en: "Day 7: Prisma",
+      },
+      link: "/7prisma",
+    },
   ];
 
   return (
